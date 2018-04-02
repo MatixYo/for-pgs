@@ -21,33 +21,33 @@ textarea {
 	outline: none;
 }
 
-#page {
+.page {
 	display: flex;
 	min-height: 100vh;
   	flex-direction: column;
 }
 
-#header-content,
-#content,
+.header-content,
+.content,
 .section {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-#header-content,
-#content {
+.header-content,
+.content {
 	width: 95%;
 }
 
 @media screen and (min-width: 1080px) {
-	#header-content,
-	#content {
+	.header-content,
+	.content {
 		width: 960px;
 	}
 }
 
 @media screen and (min-width: 720px) {
-	#inner-content {
+	.content {
 		display: flex;
 		justify-content: space-between;
 	}
@@ -57,7 +57,7 @@ textarea {
 	}
 
 	.section-camera {
-		width: 49%;
+		width: 47%;
 	}
 }
 
@@ -67,12 +67,16 @@ textarea {
 	}
 }
 
-#header {
+.header,
+.section {
 	background-color: #fff;
+}
+
+.header {
 	border-bottom: 1px #eee solid;
 }
 
-#logo {
+.logo {
 	display: block;
 	margin: 30px 0;
 	width: 116px;
@@ -89,23 +93,23 @@ nav {
 	display: flex;
 }
 
-nav > a:not(:first-child) {
+a:not(:first-child) {
 	margin-left: 25px;
 }
-nav > a:not(:last-child) {
+a:not(:last-child) {
 	margin-right: 25px;
 }
 
 a {
 	margin-bottom: -1px;
 	padding: 10px 0;
-	color: #111;
 	text-decoration: none;
+	color: #111;
 	border-bottom: 3px transparent solid;
 }
 
 a:hover {
-	border-bottom-color: #ddd;
+	border-bottom-color: .ddd;
 }
 
 a.active {
@@ -113,12 +117,13 @@ a.active {
 	border-bottom-color: #e1915d;
 }
 
-#content {
+.content {
 	flex: 1;
 	padding: 15px 0;
 }
 
 .section {
+	align-self: flex-start;
 	background-color: #fff;
 	max-width: 640px;
 	overflow: hidden;
@@ -162,19 +167,25 @@ a.active {
 
 /* Section camera */
 .camera-date {
+	display: block;
 	padding-top: 16px;
 	padding-right: 16px;
-	display: block;
 	text-align: right;
 	color: #777;
 }
 
 .camera-title {
+	margin-bottom: 8px;
 	text-align: center;
 }
 
 /* Section contact */
+.content-contact {
+	display: flex;
+}
+
 .section-contact {
+	align-self: center;
 	padding: 75px;
 	width: 50%;
 }
@@ -198,12 +209,12 @@ textarea.contact-input {
 }
 
 /* Footer */
-#footer {
+.footer {
 	padding: 20px 0;
 	background-color: #282828;
 }
 
-#footer > p {
+.footer > p {
 	margin: 15px auto;
 	padding: 15px 0;
 	width: 320px;

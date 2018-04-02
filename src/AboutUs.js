@@ -6,8 +6,7 @@ import i3 from "./i3.png";
 class Home extends Component {
   render() {
     return (
-      <div>
-      <div id="inner-content">
+      <div className="content">
         <article className="section section-about-us">
           <img className="about-us-image" src={i1} alt="1"/>
           <h2 className="about-us-title">Lorem ipsum</h2>
@@ -23,7 +22,6 @@ class Home extends Component {
           <h2 className="about-us-title">Lorem ipsum</h2>
           <p className="about-us-text">Etiam ullamcorper. Suspendisse a pellentesque dui, non felis maecenas.</p>
         </article>
-        </div>
       </div>
     );
   }

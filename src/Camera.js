@@ -10,18 +10,19 @@ class Camera extends Component {
 	}
 
 	componentDidMount() {
-		fetch(apiUrl, {headers: {"X-Mashape-Key": xMashapeKey}})
-			.then(response => response.json()).then(response => {
+		this.request = fetch(apiUrl, {headers: {"X-Mashape-Key": xMashapeKey}});
+		this.request.then(response => response.json()).then(response => {
 				let currentCity = response[this.props.city];
-				this.setState({cityName: currentCity.name, cam1: currentCity.cams[this.props.camera1].url, cam2: currentCity.cams[this.props.camera2].url});
-			});
+				if(this.refs.stream)
+					this.setState({cityName: currentCity.name, cam1: currentCity.cams[this.props.camera1].url, cam2: currentCity.cams[this.props.camera2].url});
+		});
 	}
 
 	render() {
 		let addZero = number => ('0' + number).slice(-2);
 
 		return (
-			<article className="section section-camera">
+			<article className="section section-camera" ref="stream">
 				<time className="camera-date">{addZero(this.state.date.getDay() + 1)}-{addZero(this.state.date.getMonth() + 1)}-{this.state.date.getFullYear()}</time>
 				<h2 className="camera-title">{this.state.cityName}</h2>
 				<img className="camera-image" src={this.state.cam1} alt={this.state.cityName}/>

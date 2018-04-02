@@ -5,5 +5,5 @@ import "./index.css"
  
 ReactDOM.render(
   <Main/>, 
-  document.body
+  document.querySelector('.wrapper')
 );

@@ -13,10 +13,10 @@ class Main extends Component {
   render() {
     return (
       <BrowserRouter basename="/for-pgs">
-        <div id="page">
-          <header id="header">
-            <div id="header-content">
-              <img id="logo" src={Logo} alt="PGS Software"/>
+        <div className="page">
+          <header className="header">
+            <div className="header-content">
+              <img className="logo" src={Logo} alt="PGS Software"/>
               <nav>
                 <NavLink exact to="/">About us</NavLink>
                 <NavLink to="/skicams">Skicams</NavLink>
@@ -24,12 +24,10 @@ class Main extends Component {
               </nav>
             </div>
           </header>
-          <div id="content">
-            <Route exact path="/" component={AboutUs}/>
-            <Route path="/skicams" component={Skicams}/>
-            <Route path="/contact" component={Contact}/>
-          </div>
-          <footer id="footer">
+          <Route exact path="/" component={AboutUs}/>
+          <Route path="/skicams" component={Skicams}/>
+          <Route path="/contact" component={Contact}/>
+          <footer className="footer">
             <p>Powered by PGS</p>
           </footer>
         </div>

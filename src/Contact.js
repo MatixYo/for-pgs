@@ -4,7 +4,7 @@ class Contact extends Component {
   render() {
     let preventEvent = event => event.preventDefault();
     return (
-      <div id="inner-content">
+      <div className="content content-contact">
         <form className="section section-contact" onSubmit={preventEvent}>
           <input className="contact-input" type="name" placeholder="Name" required/>
           <input className="contact-input" type="email" placeholder="Email" required/>
