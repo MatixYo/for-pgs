@@ -52,12 +52,19 @@ textarea {
 		justify-content: space-between;
 	}
 
-	.section-about-us {
-		width: 32%;
+	.section-about-us,
+	.section-camera {
+		flex: 1;
 	}
 
-	.section-camera {
-		width: 47%;
+	.section-about-us:not(:last-child),
+	.section-camera:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	.section-about-us:not(:first-child),
+	.section-camera:not(:first-child) {
+		margin-left: 15px;
 	}
 }
 
@@ -187,7 +194,7 @@ a.active {
 .section-contact {
 	align-self: center;
 	padding: 75px;
-	width: 50%;
+	width: 30%;
 }
 
 .contact-input {
