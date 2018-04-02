@@ -1,5 +1,9 @@
 # for-pgs
 
+Projekt wykonano na podstawie nadesłanych makiet.
+Użyto React oraz create-react-app.
+[Demo](https://matixyo.github.io/for-pgs/)
+
 ## Założenia
 > Projekt wykonaj wg. dołączonych makiet.
 
@@ -8,7 +12,7 @@ Done.
 > Przełączenie pomiędzy zakładkami powinno odbywać się bez przeładowania strony, w możliwie 
 najprostszy sposób.
 
-Done. Użyłem Reacta
+Done. Użyłem react-router.
 
 > Zastosuj czcionkę Roboto.
 
